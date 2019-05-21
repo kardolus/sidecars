@@ -8,4 +8,4 @@ applications:
     - name: sidecar
       process_types:
         - web
-      command: './sidecar'
+      command: './bin/sidecar'

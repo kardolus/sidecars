@@ -13,11 +13,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	log.SetFlags(log.Lshortfile)
 
 	file := filepath.Join("/home/vcap/app/sidecar-sample.sock")
-	message := "Hello"
-
-	// fmt.Println("Waiting for sidecar to come up")
-	// time.Sleep(time.Second * 10)
-	// fmt.Println("Connected to sidecar")
+	message := "Hello,"
 
 	conn, err := net.Dial("unix", file)
 	if err != nil {
