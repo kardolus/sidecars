@@ -1,0 +1,11 @@
+---
+applications:
+ - name: sidecar-dependent-app
+   env:
+     GOVERSION: go1.12
+     CONFIG_SERVER_PORT: 8082
+   sidecars:
+    - name: sidecar
+      process_types:
+        - web
+      command: './sidecar'
