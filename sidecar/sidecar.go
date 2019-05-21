@@ -42,7 +42,7 @@ func main() {
 
 				buf = buf[:recv_data]
 				log.Printf("[sidecar] receive from Main-App: %s\n", string(buf))
-				send_data = append(buf, []byte("Super_Secret_Credentials")...)
+				send_data = append(buf, []byte(" Super_Secret_Credentials")...)
 			}
 			conn.Write(send_data)
 			log.Printf("[sidecar] send to Main-App: %s\n", string(send_data))
